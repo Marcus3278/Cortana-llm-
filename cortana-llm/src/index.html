@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortana LLM</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <div class="cortana-logo">
+                    <div class="logo-circle"></div>
+                    <span class="logo-text">Cortana</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="window-btn minimize-btn" id="minimizeBtn">−</button>
+                <button class="window-btn close-btn" id="closeBtn">×</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Avatar Section -->
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <canvas id="avatarCanvas" width="300" height="300"></canvas>
+                    <div class="avatar-status" id="avatarStatus">
+                        <div class="status-indicator"></div>
+                        <span class="status-text">Ready</span>
+                    </div>
+                </div>
+                
+                <!-- Voice Controls -->
+                <div class="voice-controls">
+                    <button class="voice-btn" id="voiceBtn">
+                        <div class="mic-icon"></div>
+                        <span>Click to Talk</span>
+                    </button>
+                    <div class="wake-word-info">
+                        <span>Or say "Hey Cortana" or press Ctrl+Shift+C</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Section -->
+            <div class="chat-section">
+                <div class="chat-container" id="chatContainer">
+                    <div class="welcome-message">
+                        <div class="message bot-message">
+                            <div class="message-content">
+                                <p>Hello! I'm your personal assistant. I can help you with:</p>
+                                <ul>
+                                    <li>Weather information and forecasts</li>
+                                    <li>Web search and instant answers</li>
+                                    <li>System information</li>
+                                    <li>File searches</li>
+                                    <li>Calculations</li>
+                                    <li>Reminders and notes</li>
+                                    <li>General questions</li>
+                                </ul>
+                                <p>Try saying "Hey Cortana" or click the microphone to get started!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Input Area -->
+                <div class="input-area">
+                    <div class="input-container">
+                        <input type="text" id="textInput" placeholder="Type your message or use voice..." />
+                        <button class="send-btn" id="sendBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Processing...</div>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel" id="settingsPanel">
+            <div class="settings-header">
+                <h3>Settings</h3>
+                <button class="close-settings" id="closeSettings">×</button>
+            </div>
+            <div class="settings-content">
+                <div class="setting-group">
+                    <label>Voice Recognition</label>
+                    <select id="voiceSelect">
+                        <option value="auto">Auto-detect</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label>Speech Rate</label>
+                    <input type="range" id="speechRate" min="0.5" max="2" step="0.1" value="1">
+                </div>
+                <div class="setting-group">
+                    <label>Wake Word Sensitivity</label>
+                    <input type="range" id="wakeWordSensitivity" min="0.1" max="1" step="0.1" value="0.7">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/avatar.js"></script>
+    <script src="js/speech.js"></script>
+    <script src="js/knowledge-base.js"></script>
+    <script src="js/learning-system.js"></script>
+    <script src="js/llm-client.js"></script>
+    <script src="services/weather-service.js"></script>
+    <script src="services/web-search-service.js"></script>
+    <script src="services/task-handler.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

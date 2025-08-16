@@ -1,0 +1,177 @@
+{
+  "tasks": {
+    "weather": {
+      "name": "Weather Information",
+      "description": "Get current weather and forecasts",
+      "keywords": ["weather", "temperature", "forecast", "rain", "sunny", "cloudy", "storm"],
+      "examples": [
+        "What's the weather like?",
+        "Will it rain today?",
+        "What's the temperature outside?",
+        "Weather forecast for tomorrow"
+      ],
+      "requiresLocation": true,
+      "apiEndpoint": null
+    },
+    "system_info": {
+      "name": "System Information",
+      "description": "Get computer system information",
+      "keywords": ["system", "computer", "specs", "memory", "cpu", "disk", "performance"],
+      "examples": [
+        "What are my system specs?",
+        "How much memory do I have?",
+        "Show system information",
+        "Computer performance"
+      ],
+      "requiresLocation": false,
+      "apiEndpoint": "electronAPI.getSystemInfo"
+    },
+    "file_search": {
+      "name": "File Search",
+      "description": "Search for files on the computer",
+      "keywords": ["find", "search", "locate", "file", "document", "folder"],
+      "examples": [
+        "Find my resume",
+        "Search for PDF files",
+        "Locate documents folder",
+        "Find files containing 'project'"
+      ],
+      "requiresLocation": false,
+      "apiEndpoint": "electronAPI.searchFiles"
+    },
+    "calculation": {
+      "name": "Calculator",
+      "description": "Perform mathematical calculations",
+      "keywords": ["calculate", "math", "add", "subtract", "multiply", "divide", "equation"],
+      "examples": [
+        "Calculate 15 * 24",
+        "What's 100 divided by 7?",
+        "Math: 2 + 2 * 3",
+        "Square root of 144"
+      ],
+      "requiresLocation": false,
+      "apiEndpoint": null
+    },
+    "time_date": {
+      "name": "Time and Date",
+      "description": "Get current time and date information",
+      "keywords": ["time", "date", "clock", "today", "now", "current"],
+      "examples": [
+        "What time is it?",
+        "What's today's date?",
+        "Current time",
+        "What day is it?"
+      ],
+      "requiresLocation": false,
+      "apiEndpoint": null
+    },
+    "reminders": {
+      "name": "Reminders",
+      "description": "Set and manage reminders",
+      "keywords": ["remind", "reminder", "schedule", "appointment", "meeting", "task"],
+      "examples": [
+        "Remind me to call John at 3 PM",
+        "Set a reminder for tomorrow",
+        "Schedule a meeting reminder",
+        "Add task to my list"
+      ],
+      "requiresLocation": false,
+      "apiEndpoint": null
+    },
+    "web_search": {
+      "name": "Web Search",
+      "description": "Search the internet for information",
+      "keywords": ["search", "google", "look up", "find online", "internet"],
+      "examples": [
+        "Search for Python tutorials",
+        "Look up the latest news",
+        "Find information about AI",
+        "Google JavaScript frameworks"
+      ],
+      "requiresLocation": false,
+      "apiEndpoint": null
+    },
+    "applications": {
+      "name": "Application Control",
+      "description": "Open and manage applications",
+      "keywords": ["open", "launch", "start", "close", "quit", "application", "program"],
+      "examples": [
+        "Open calculator",
+        "Launch notepad",
+        "Start browser",
+        "Close all applications"
+      ],
+      "requiresLocation": false,
+      "apiEndpoint": null
+    },
+    "music": {
+      "name": "Music Control",
+      "description": "Control music playback",
+      "keywords": ["play", "pause", "stop", "music", "song", "volume", "next", "previous"],
+      "examples": [
+        "Play some music",
+        "Pause the song",
+        "Next track",
+        "Turn up the volume"
+      ],
+      "requiresLocation": false,
+      "apiEndpoint": null
+    },
+    "general": {
+      "name": "General Conversation",
+      "description": "General questions and conversation",
+      "keywords": ["what", "how", "why", "when", "where", "tell me", "explain"],
+      "examples": [
+        "How are you?",
+        "Tell me a joke",
+        "What can you do?",
+        "Explain artificial intelligence"
+      ],
+      "requiresLocation": false,
+      "apiEndpoint": null
+    }
+  },
+  "responses": {
+    "greeting": [
+      "Hello! I'm Cortana, your personal assistant. How can I help you today?",
+      "Hi there! What can I do for you?",
+      "Good to see you! How may I assist you?",
+      "Hello! I'm here to help. What do you need?"
+    ],
+    "goodbye": [
+      "Goodbye! Have a great day!",
+      "See you later! Take care!",
+      "Until next time! Stay safe!",
+      "Farewell! I'll be here when you need me."
+    ],
+    "error": [
+      "I'm sorry, I encountered an error processing your request.",
+      "Something went wrong. Could you please try again?",
+      "I apologize, but I'm having trouble with that request.",
+      "There seems to be an issue. Let me try to help you differently."
+    ],
+    "not_understood": [
+      "I'm not sure I understand. Could you rephrase that?",
+      "Could you be more specific about what you need?",
+      "I didn't quite catch that. Can you try asking differently?",
+      "I'm having trouble understanding. Could you clarify?"
+    ],
+    "offline": [
+      "I'm currently running in offline mode with limited capabilities.",
+      "Some features aren't available right now, but I can still help with basic tasks.",
+      "I'm working with reduced functionality at the moment.",
+      "My full capabilities aren't available, but I'll do my best to help."
+    ]
+  },
+  "settings": {
+    "wakeWords": ["hey cortana", "cortana", "hey assistant"],
+    "defaultVoice": "female",
+    "speechRate": 1.0,
+    "wakeWordSensitivity": 0.7,
+    "maxConversationHistory": 10,
+    "responseTimeout": 30000,
+    "autoListen": true,
+    "voiceEnabled": true,
+    "animationsEnabled": true
+  }
+}
